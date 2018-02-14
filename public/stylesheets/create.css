@@ -1,0 +1,47 @@
+.box {
+    margin: 0 auto;
+    width: 804px;
+    height: auto;
+    margin-top: 10%;
+}
+
+input {
+    height: 40px;
+    width: 800px;
+}
+
+textarea {
+    height: 400px;
+    width: 800px;
+    margin-top: 20px;
+}
+
+.box div {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.box div input {
+    height: 40px;
+    width: 100px;
+    border: none;
+}
+
+.alterErr {
+    opacity: 0;
+    height: 40px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 6px;
+    background-color: red;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    animation: frist 4s;
+}
+
+@keyframes frist {
+    0% { opacity: 0 }
+    50% { opacity: 1 }
+    100% { opacity: 0 }
+}

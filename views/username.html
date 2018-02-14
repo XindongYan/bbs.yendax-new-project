@@ -1,0 +1,29 @@
+<%- layout('layout')%>
+<%- partial('navbar')%>
+
+<link rel="stylesheet" type="text/css" href="../public/stylesheets/information.css"/>
+<!-- import Vue.js -->
+<script src="//vuejs.org/js/vue.min.js"></script>
+<!-- import stylesheet -->
+<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+<!-- import iView -->
+<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+    
+<div class="box">
+    <img class="avatar" src="/avatar/<%= current_user.avatar%>"/>
+    <p><%= current_user.username %></p>
+    <form action="/genhuan" method="post" enctype="multipart/form-data">
+        <input type="file" name="img-file">
+        <input type="submit" value="提交">
+    </form>    
+</div>
+
+<template>
+    <Upload action="//jsonplaceholder.typicode.com/posts/">
+        <Button type="ghost" icon="ios-cloud-upload-outline">Upload files</Button>
+    </Upload>
+</template>
+
+<div class="cont">
+    <%- partial('information', value)%>
+</div>

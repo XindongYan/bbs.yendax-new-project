@@ -1,0 +1,72 @@
+<%- layout('layout')%>
+<link rel="stylesheet" type="text/css" href="../public/stylesheets/signup.css"/>
+<style>
+        a {
+            text-decoration: none
+        }
+    
+        input {
+            height: 35px;
+            width: 200px;
+            border-radius: 3px;
+            border: 0.5px solid #cccccc;
+        }
+    
+        input::-webkit-input-placeholder {
+            text-align: center;
+        }
+    
+        button {
+            height: 30px;
+            width: 70px;
+            background: #fff;
+            border-radius: 3px;
+            border: 0.8px solid #ccc;
+            font-size: 15px
+        }
+    
+        div {
+          margin-top: 150px;
+        }
+    </style>
+    <% if(typeof(error) != 'undefined' && error) {%>
+        <div class="alterErr">
+            <%= error%>
+        </div>
+    <% }%>
+
+    <% if(typeof(success) != 'undefined' && success) {%>
+        <div class="alterOk">
+            <%= success%>
+        </div>
+    <% }%>
+
+
+    <div class="signupIndex">
+        <form action="signup", method="post">
+            <div>
+                <label for="">用户名:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                <input type="text" name="username" id="username">
+
+                <br>
+
+                <label for="">Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                <input type="text" name="Email" id="Email">
+
+                <br>
+
+                <label for="">密码:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                <input type="password" name="password" id="password">
+
+                <br>
+
+                <label for="">确认密码:&nbsp&nbsp</label>
+                <input type="password" name="re_password" id="re_password">
+            
+                <div>
+                    <input  type="submit" value="注册">
+                    <input style="background: lightseagreen" type="reset" value="重置">
+                </div>
+            </div>
+        </form>
+    </div>

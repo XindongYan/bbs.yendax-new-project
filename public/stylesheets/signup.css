@@ -1,0 +1,23 @@
+.signupIndex {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 13%;
+}
+
+.signupIndex div {
+    text-align: center;
+}
+
+.signupIndex input {
+    margin:20px;
+    height: 25px;
+    width: 200px;
+}
+
+.signupIndex div div input {
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    width: 100px;
+}

@@ -1,0 +1,35 @@
+<%- layout('layout')%>
+    <%- partial('navbar')%>
+
+        <style>
+            @media screen and (min-width: 1000px) {
+                /* img {width: 600px} */
+            }
+
+            .images div img {
+                width: 30px;
+                height: 30px;
+            }
+        </style>
+
+        <div class="indexbox">
+            <h>BBS.Yendax</h>
+            <p>基于Vue.js(部分)和Node.js开发的Web项目开源平台</p>
+            <a href="/content">点击浏览 >></a>
+
+            <img style="width: 300px; margin-left: 10%" class="img" src="../public/images/update.png" />
+            <div class="images">
+                <div>
+                    <img src="../public/images/social-javascript.png" alt="">
+                </div>
+                <div>
+                    <img src="../public/images/nodejs.png" alt="">
+                </div>
+                <div>
+                    <img src="../public/images/vuejs.png" alt="">
+                </div>
+                <div>
+                    <img src="../public/images/html5.png" alt="">
+                </div>
+            </div>
+        </div>

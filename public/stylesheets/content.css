@@ -1,0 +1,55 @@
+.Surround{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.Surround input {
+    margin-left: 40px;
+}
+
+.up {
+    background-color: #3FAFCE;
+    color: #fff;
+    border: none;
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.in1 {
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 200px;    
+}
+
+button {
+    height: 45px;
+    border: none;
+}
+
+.list {
+    background:  #fff;
+    height: 90px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 4px;
+    margin-top: 30px;
+    border: 1px solid #EAEAEA;
+}
+
+.list li {
+    line-height: 90px;
+    float: left;
+}
+
+.list .username {
+    float: right;
+    margin-right: 50px;
+}
+
+.serch {
+    border: 1px solid red;
+    width: 300px;
+}

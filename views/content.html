@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <title>话题</title>
+    <style>
+        @media screen and (max-width: 400px) {
+            .box {
+                width: 350px;
+                margin: 0 auto; 
+                font-size: 15px;
+                padding-left: 40px;
+            }
+        }
+        @media screen and (min-width: 500px) {
+            .box {
+                width: 500px;
+                margin: 0 auto; 
+                font-size: 15px;
+            }
+        }
+    </style>
+    
+</head>
+
+<body style="background:#F7F8FA">
+
+    <%- partial('navbar')%>
+        <br>
+        <div id="app" style="text-align: center;">
+            <form action="/serch" method="post">
+                <i-Input v-model="value1" size="large" placeholder="" style="width: 210px;"></i-Input>
+            <!-- <Button @click="error(false)">Error</Button> -->
+            <i-Button type="ghost" icon="ios-search" @click="error(false)">Search</i-Button>
+            </form>
+
+            <br />
+            <!-- <form action="/topic/create"> -->
+            <a href="/topic/create">
+                <i-Button type="primary">上传你的知识</i-Button>
+            </a>
+            <!-- </form> -->
+            <br />
+            <br />
+            <br />
+            <%- partial('list', topic)%>
+        </div>
+
+
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        value1: ''
+                    }
+                },
+                methods: {
+                    error(nodesc) {
+                        this.$Notice.error({
+                            title: '工程测试版',
+                            desc: nodesc ? '' : '很抱歉 新冬 闫 已将此方法暂时锁死，等待内部开发完毕'
+                        });
+                    }
+                }
+            })
+        </script>
+</body>
+
+</html>

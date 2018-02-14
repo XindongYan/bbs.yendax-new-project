@@ -1,0 +1,37 @@
+.topic_home {
+    min-height: 200px;
+    max-height: auto;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid #E0E0E0;
+}
+
+.topic_home li {
+    margin: 40px;
+}
+
+.reply {
+    height: 40px;
+    width: 60%;
+}
+
+.up {
+    height: 44px;
+    width: 100px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+    color: #fff;
+    background: #40B1CF;
+}
+
+.reply {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.comment {
+    margin-top: 50px;
+}
