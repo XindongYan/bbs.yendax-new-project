@@ -47,10 +47,10 @@ exports.signin = (req, res, next) => {
     //!NULL
     if( !username || !password ) return res.render('sign/signin', { error: '不可能为空' })
 
-    inpassword = blow(password)
+    password = blow(password)
 
     //find username
-    db.User.findOne({username,inpassword}, (err, result) => {
+    db.User.findOne({username,password}, (err, result) => {
         if(err) return res.render('sign/signin', { error: '登陆错误' })
         if(result) {req.session.result = result; return res.redirect('/')}
         else { return res.render('sign/signin', { error: '账户或者密码错误' }) }
